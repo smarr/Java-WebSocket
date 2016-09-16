@@ -15,6 +15,12 @@
 			<fileset dir="build/classes" includes="**/*.class" />
 		</jar>
 	</target>
+	
+	<target name="source-jar" depends="compile">
+		<jar destfile="dist/websocket-source.jar">
+			<fileset dir="src/main" includes="**/*.java" />
+		</jar>
+	</target>
 
 	<target name="doc">
 		<delete dir="doc" />
